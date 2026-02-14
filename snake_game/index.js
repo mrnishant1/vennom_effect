@@ -29,7 +29,7 @@ class Scene {
     this.stopAnimate = true;
   }
   //what i want is to check colisioin b/w food and snake
-  checkCollision() {
+  gameBorder() {
     const snake = this.snake_body.Head;
     if (!snake) return;
     const x1 = snake.posX + snake.width / 2;
@@ -53,12 +53,10 @@ class Scene {
 
   renderAnimation() {
     if (this.stopAnimate) return;
-    this.checkCollision();
+    this.gameBorder();
     this.clearCanvas();
     this.food.draw();
     this.snake_body.moveHead_rest_follow(this.snake_speed);
-    // this.snake_body.forEach(() => {
-    // });
   }
 }
 
