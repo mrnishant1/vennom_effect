@@ -610,7 +610,7 @@ const enemy = new Game_object(50, 50, ctx);
 enemy.draw();
 
 let npc_enemy = [];
-const MIN_DIST = 200; //to change distance b/w npcc
+const MIN_DIST = 170; //to change distance b/w npcc
 function invalidSpawn(x, y, list, player) {
   // too close to other NPCs
   const nearNpc = list.some((n) => {
